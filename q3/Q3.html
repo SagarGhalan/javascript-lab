@@ -1,0 +1,24 @@
+<html>
+<body>
+    <input type="text" id="input">
+    <button onclick="setdata()">Add</button>
+    <script>
+        function setdata()
+        {
+            var input = document.getElementById('input').value;
+            var b = input.split(',');
+            add(b);
+        }
+
+        function add(a)
+        {
+            var sum = 0;
+            for(var i=0;i<a.length;i++)
+            {
+                sum = sum + parseInt(a[i]);
+            }
+            alert("The sum is "+sum);
+        }
+    </script>
+</body>
+</html>

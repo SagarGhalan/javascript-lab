@@ -1,0 +1,32 @@
+<html>
+    <body>
+        <form>
+            <input type="text" id="textbox1">
+            <button onclick="Transform('textbox1','textbox2')">Click</button>
+            <br>
+            <input type="text" id="textbox2">
+            <button onclick="Transform('textbox2','textbox1')">Click</button>
+        </form>
+        <script>
+            function Transform(a,b)
+            {
+                var textBox1 = document.getElementById(a).value;
+                var textBox1 = textBox1.split('');
+
+                for(var i=0; i<textBox1.length;i++)
+                {
+                    if(textBox1[i] == textBox1[i].toLowerCase()){
+                        textBox1[i] = textBox1[i].toUpperCase();
+                    }
+                    else{
+                        textBox1[i] = textBox1[i].toLowerCase();
+                    }
+                }
+                var textBox2 = document.getElementById(b);
+                textBox2.value = textBox1.join('');
+                event.preventDefault();
+
+            }
+        </script>
+    </body>
+</html>

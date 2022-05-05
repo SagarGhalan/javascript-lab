@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <input type="text" id="txt">
+        <br>
+        <button onclick="changeColor()">Change</button>
+    </body>
+    <script>
+        function changeColor()
+        {
+            let color = document.getElementById('txt').value;
+            document.body.style.backgroundColor = color;
+            event.preventDefault();
+        }
+    </script>
+</html>
