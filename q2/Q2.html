@@ -1,194 +1,158 @@
 <html>
-<script>
-    // function fname(){
-    //     var regName = /^[a-zA-Z]+ [a-zA-Z]+$/;
-    //     var name = document.getElementById('name').value;
-    //     console.log(name);
-    //     if(!regName.test(name)){
-    //         alert('Please enter your full name (first & last name).');
-    //         document.getElementById('name').focus();
-    //         return false;
-    //     }else{
-    //         alert('Valid name given.');
-    //         return true;
-    //     }
-    // }
+    <head>
+        <script>
 
-    // function phone(){
-    //     var regEx = /^+[977]+$/;
-    //     var phone = document.getElementById('phone').value;
-    //     if(!regName.test(phone)){
-    //         alert('Please enter your phone number.');
-    //         document.getElementById('phone').focus();
-    //         return false;
-    //     }else{
-    //         alert('Valid phone number given.');
-    //         return true;
-    //     }
-    // }
-    
-    // function email(){
-    // var regexb = /^[a-zA-Z\d\s\._]+@[a-z\.]+\.[a-z]{2,3}$/;
-    // var email = document.getElementById('email').value;
-    //     if(!regName.test(email)){
-    //         alert('Please enter yor email.');
-    //         document.getElementById('email').focus();
-    //         return false;
-    //     }else{
-    //         alert('Valid email given.');
-    //         return true;
-    //     }
-    // }
-    function getId(element)
-    {
-        return document.getElementById(element);
-    }
-    function validate()
-    {
-        var fullname = getId('name');
-        var address = getId('address');
-        var phone = getId('phone');
-        var gender = getId('gender');
-        var email = getId('email');
-        var country = getId('country');
-        var comment = getId('comment');
-
-        var error = "Please provide valid data";
-        if(fullname.value.length == 0)
-        {
-            alert("Fullname cannot be empty");
-            fullname.focus();
-            return false;
-        }
-        if(!fullname.value.match(/^[a-zA-Z\s]+$/))
-        {
-            alert(error);
-            fullname.focus();
-            return false;
-        }
-        if(address.value.length == 0)
-        {
-            alert("Address cannot be empty");
-            address.focus();
-            return false;
-        }
-        if(phone.value.length == 0)
-        {
-            alert("Phone cannot be empty");
-            phone.focus();
-            return false;
-        }
-        if(!phone.value.match(/^[0-9\+\-]{10,15}$/))
-        {
-            alert(error);
-            phone.focus();
-            return false;
-        }
-        if(gender.checked == false)
-        {
-            alert("Select your gender");
-            gender.focus();
-            return false;
-        }
-        if(email.value.length == 0)
-        {
-            alert("Email cannot be empty");
-            email.focus();
-            return false;
-        }
-        if(!email.value.match(/^[a-zA-Z\d\s\._]+@[a-z\.]+\.[a-z]{2,3}$/))
-        {
-            alert("Invalid E-mail format");
-            email.focus();
-            return false;w
-        }
-        if(country.value == 0)
-        {
-            alert("Select your country");
-            country.focus();
-            return false;
-        }
-        if(comment.value.length == 0)
-        {
-            alert("Comment cannot be empty");
-            comment.focus();
-            return false;
-        }
-
-    }
-</script>
-<body>
-    <form action="#" onsubmit = "return validate()">
-        <table>
-            <tr>
-                <td>
-                    <label>Full Name:</label>
-                </td>
-                <td>
-                    <input type="text" id="name">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label>Address:</label>
-                </td>
-                <td>
-                    <input type="text" id="address">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label>Telephone:</label>
-                </td>
-                <td>
-                    <input type="text" id="phone">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label>Gender:</label>
-                </td>
-                <td>
-                    <input type="radio" id="gender" name="gender" value="M">Male
-                    <input type="radio" id="gender" name="gender" value="F">Female
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label>Email:</label>
-                </td>
-                <td>
-                    <input type="text" id="email">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label>Country:</label>
-                </td>
-                <td>
-                    <select id="country">
-                        <option value="0">Select</option>
-                        <option value="Nepal">Nepal</option>
-                        <option value="India">India</option>
-                        <option value="China">China</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label>Comments:</label>
-                </td>
-                <td>
-                    <textarea id="comment" cols="30" rows="10"></textarea>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input type="submit" value="Submit">
-                </td>
-            </tr>
-        </table>
-    </form>
-</body>
+            function getId(element)
+            {
+                return document.getElementById(element);
+            }
+            function validate()
+            {
+                var fullname = getId('name');
+                var address = getId('address');
+                var phone = getId('phone');
+                var gender = getId('gender');
+                var email = getId('email');
+                var country = getId('country');
+                var comment = getId('comment');
+        
+                var error = "Please provide valid data";
+                if(fullname.value.length == 0)
+                {
+                    alert("Fullname cannot be empty");
+                    fullname.focus();
+                    return false;
+                }
+                if(!fullname.value.match(/^[a-zA-Z\s]+$/))
+                {
+                    alert(error);
+                    fullname.focus();
+                    return false;
+                }
+                if(address.value.length == 0)
+                {
+                    alert("Address cannot be empty");
+                    address.focus();
+                    return false;
+                }
+                if(phone.value.length == 0)
+                {
+                    alert("Phone cannot be empty");
+                    phone.focus();
+                    return false;
+                }
+                if(!phone.value.match(/^[0-9\+\-]{10,15}$/))
+                {
+                    alert(error);
+                    phone.focus();
+                    return false;
+                }
+                if(gender.checked == false)
+                {
+                    alert("Select your gender");
+                    gender.focus();
+                    return false;
+                }
+                if(email.value.length == 0)
+                {
+                    alert("Email cannot be empty");
+                    email.focus();
+                    return false;
+                }
+                if(!email.value.match(/^[a-zA-Z\d\s\._]+@[a-z\.]+\.[a-z]{2,3}$/))
+                {
+                    alert("Invalid E-mail format");
+                    email.focus();
+                    return false;w
+                }
+                if(country.value == 0)
+                {
+                    alert("Select your country");
+                    country.focus();
+                    return false;
+                }
+                if(comment.value.length == 0)
+                {
+                    alert("Comment cannot be empty");
+                    comment.focus();
+                    return false;
+                }
+        
+            }
+        </script>
+    </head>
+    <body>
+        <form action="#" onsubmit = "return validate()">
+            <table>
+                <tr>
+                    <td>
+                        <label>Full Name:</label>
+                    </td>
+                    <td>
+                        <input type="text" id="name">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Address:</label>
+                    </td>
+                    <td>
+                        <input type="text" id="address">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Telephone:</label>
+                    </td>
+                    <td>
+                        <input type="text" id="phone">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Gender:</label>
+                    </td>
+                    <td>
+                        <input type="radio" id="gender" name="gender" value="M">Male
+                        <input type="radio" id="gender" name="gender" value="F">Female
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Email:</label>
+                    </td>
+                    <td>
+                        <input type="text" id="email">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Country:</label>
+                    </td>
+                    <td>
+                        <select id="country">
+                            <option value="0">Select</option>
+                            <option value="Nepal">Nepal</option>
+                            <option value="India">India</option>
+                            <option value="China">China</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Comments:</label>
+                    </td>
+                    <td>
+                        <textarea id="comment" cols="30" rows="10"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Submit">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
 
 </html>
